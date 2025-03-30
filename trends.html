@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trends Article</title>
+  <link rel="stylesheet" href="trends.css" />
+  <script src="trends.js"></script>
+</head>
+
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <div class="navbar">
+  
+    <div class="logo">
+      <a href="#">Logo</a>
+    </div>
+
+   
+    <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- Hamburger icon -->
+
+    <!-- Menu items, displayed when hamburger is toggled -->
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="hero-container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-image">
+        <img src="images/hero_image1.jpg" alt="Hero Image 1" class="hero-slide">
+        <img src="images/hero_image2.jpg" alt="Hero Image 2" class="hero-slide">
+        <img src="images/hero_image3.jpg" alt="Hero Image 3" class="hero-slide">
+        <!-- Add more images if needed -->
+      </div>
+      <div class="hero-text">
+        <h1>Spring Fashion Trends 2025</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda reiciendis blanditiis non eligendi tenetur omnis temporibus tempora laudantium nemo consequatur fuga soluta, eos sit inventore, harum corporis saepe quam cupiditate?</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="trends-page">
+    <!-- Various Trends Grid -->
+    <section class="trend-grid">
+      <div class="trend-item">
+        <div class="trend-image" style="background-image: url('images/Pink.png');"></div>
+        <div class="trend-info">
+          <h3>Trend 1</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus alias aliquam blanditiis consectetur, accusamus ullam fugiat, eaque rerum aut deserunt doloribus recusandae odit optio facere officia dignissimos voluptatibus quo totam?</p>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-image" style="background-image: url('images/pink.png');"></div>
+        <div class="trend-info">
+          <h3>Trend 2</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error illum ratione vitae. Dolores id praesentium nobis, voluptates delectus blanditiis, recusandae deleniti suscipit ea sint expedita exercitationem esse fugit qui soluta.</p>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-image" style="background-image: url('images/pink.png');"></div>
+        <div class="trend-info">
+          <h3>Trend 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dolores enim error, corporis ad officiis possimus quia cumque natus quasi? Sit dolorem laudantium dolor repellat veritatis consectetur, rerum illo eius!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="section-heading">Men’s Trending Clothing</section>
+    <section class="product-grid">
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 1</div>
+      </div>
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 2</div>
+      </div>
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 3</div>
+      </div>
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 4</div>
+      </div>
+    </section>
+
+    <section class="section-heading">Women’s Trending Clothing</section>
+    <section class="product-grid">
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 1</div>
+      </div>
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 2</div>
+      </div>
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 3</div>
+      </div>
+      <div class="product-item" style="background-image: url('images/pink.png');">
+        <div class="product-text">Product 4</div>
+      </div>
+    </section>
+
+  
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.hero-slide');
+
+    function changeImage() {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }
+
+    setInterval(changeImage, 3000); 
+  </script>
+</body>
+</html>
