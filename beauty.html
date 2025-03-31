@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beauty Page</title>
+  <link rel="stylesheet" href="general.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">Logo</a>
+    </div>
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="hero">
+    <img src="https://via.placeholder.com/1200x400" alt="Hero Image"/>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Card Image"/>
+      <p>Card Text</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Card Image"/>
+      <p>Card Text</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Card Image"/>
+      <p>Card Text</p>
+    </div>
+  </section>
+
+  <section class="details">
+    <ul>
+      <li>Detail Point 1</li>
+      <li>Detail Point 2</li>
+      <li>Detail Point 3</li>
+    </ul>
+    <img src="https://via.placeholder.com/100" alt="Small Image"/>
+    <p>Additional text goes here. Could be about the site or service.</p>
+  </section>
+
+  <footer>
+    <p>Footer or ending section text</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
