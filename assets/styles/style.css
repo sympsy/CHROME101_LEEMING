@@ -1,0 +1,79 @@
+:root {
+    --background-color-1: #e4cfbd;
+}
+
+body {
+    background-color: var(--background-color-1);
+}
+
+#home-scrapbook {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive columns */
+    grid-auto-rows: minmax(200px, auto);
+    /* Auto-adjust row height */
+    gap: 10px;
+    /* Space between grid items */
+    padding: 20px;
+    max-width: 1200px;
+    /* Optional max width for the scrapbook */
+    margin: 0 auto;
+    /* Center the scrapbook */
+}
+
+#home-scrapbook>div {
+    /* Target direct children of the scrapbook */
+    /* Add styles for individual scrapbook pieces here */
+    /* Example background */
+    border-radius: 8px;
+    padding: 0px;
+    display: flex;
+    /* Use flexbox for layout within each piece */
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+}
+
+/* Varying Sizes (using grid-row and grid-column) */
+#home-scrapbook>div:nth-child(even) {
+    grid-row: span 2;
+    /* Make even items span 2 rows */
+}
+
+#home-scrapbook>div:nth-child(3n) {
+    grid-column: span 2;
+    /* Make every 3rd item span 2 columns */
+}
+
+/* Optional: Add random rotations for a more scrapbook-like feel */
+#home-scrapbook>div {
+    transform: rotate(calc(var(--random-rotation, 0) * 1deg));
+}
+
+#home-scrapbook>div:nth-child(1) {
+    --random-rotation: 2;
+}
+
+#home-scrapbook>div:nth-child(2) {
+    --random-rotation: -3;
+}
+
+#home-scrapbook>div:nth-child(3) {
+    --random-rotation: 1;
+}
+
+#home-scrapbook>div:nth-child(4) {
+    --random-rotation: -2;
+}
+
+#home-scrapbook>div:nth-child(5) {
+    --random-rotation: 4;
+}
+
+#home-scrapbook>div:nth-child(6) {
+    --random-rotation: -1;
+}
+
+/* you can keep adding to nth child for more rotations */
