@@ -3,65 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Beauty Page</title>
+  <title>Scrapbook Beauty Page</title>
+
+  <!-- Fonts for scrapbook vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="general.css"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="beauty.css"/>
 </head>
 <body>
   <input type="checkbox" id="menu-toggle" class="menu-toggle" />
   <div class="navbar">
     <div class="logo">
-      <a href="#">Logo</a>
+      <a href="#">Chrome101</a>
     </div>
     <label for="menu-toggle" class="hamburger">&#9776;</label>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    <div class="nav-links-container">
+      <ul class="nav-links left-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Beauty</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+      <ul class="nav-links right-links">
+        <li><a href="#">Trends</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Credits</a></li>
+      </ul>
+    </div>
   </div>
 
   <div class="menu">
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#">Beauty</a></li>
+      <li><a href="#">Accessories</a></li>
+      <li><a href="#">Trends</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Credits</a></li>
     </ul>
   </div>
 
   <section class="hero">
-    <img src="https://via.placeholder.com/1200x400" alt="Hero Image"/>
+    <img src="images/y2k_background.avif" alt="Y2K Beauty Banner"/>
   </section>
 
   <section class="cards">
     <div class="card">
-      <img src="https://via.placeholder.com/150" alt="Card Image"/>
-      <p>Card Text</p>
+      <img src="images/frosted_eyeshadow.jpeg" alt="Frosted Eyeshadow"/>
+      <p>Frosted Eyeshadow</p>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/150" alt="Card Image"/>
-      <p>Card Text</p>
+      <img src="images/lipbalm.jpeg" alt="Glossy Lips"/>
+      <p>Glossy Lips</p>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/150" alt="Card Image"/>
-      <p>Card Text</p>
+      <img src="images/glitter_mascara.webp" alt="Glitter Mascara"/>
+      <p>Glitter Mascara</p>
+    </div>
+  </section>
+  
+
+  <section class="icons">
+    <h2>2000s Beauty Icons</h2>
+    <div class="gallery">
+      <img src="images/britney_spears.jpeg" alt="Britney Spears"/>
+      <img src="images/paris.jpeg" alt="Paris Hilton"/>
+      <img src="images/christina_aguilera.png" alt="Christina Aguilera"/>
     </div>
   </section>
 
-  <section class="details">
-    <ul>
-      <li>Detail Point 1</li>
-      <li>Detail Point 2</li>
-      <li>Detail Point 3</li>
-    </ul>
-    <img src="https://via.placeholder.com/100" alt="Small Image"/>
-    <p>Additional text goes here. Could be about the site or service.</p>
-  </section>
+    <!-- ✨ CAROUSEL START -->
+    <section class="carousel-wrap">
+      <h2 class="carousel-heading">Y2K Makeup Picks</h2>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-item" style="background-image: url('images/body_glitter.avif');">
+            <div class="carousel-text">Body Glitter</div>
+          </div>
+          <div class="carousel-item" style="background-image: url('images/pale_pink.webp');">
+            <div class="carousel-text">Frosted Lipstick</div>
+          </div>
+          <div class="carousel-item" style="background-image: url('images/lip_gloss.avif');">
+            <div class="carousel-text">Lip Gloss</div>
+          </div>
+          <div class="carousel-item" style="background-image: url('images/lip_smackers.avif');">
+            <div class="carousel-text">Lip Smackers</div>
+          </div>
+          <div class="carousel-item" style="background-image: url('images/roll_on_glitter_eyeshadow.webp');">
+            <div class="carousel-text">Glitter Eyeshadow</div>
+          </div>
+          <div class="carousel-item" style="background-image: url('images/victorias_secret_love_spell.webp');">
+            <div class="carousel-text">Victoria’s Secret Love Spell</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ✨ CAROUSEL END -->
 
+    <section class="tips-tricks">
+      <h2>Y2K Beauty Hacks ✨</h2>
+      <ul>
+        <li>✨ Use frosted eyeshadow as highlighter for shimmer overload.</li>
+        <li>💄 Line your lips with brown pencil + clear gloss for THE Y2K lip.</li>
+        <li>👁 Dab glitter over shadow with your finger for disco doll vibes.</li>
+        <li>🎀 Stick gems near your eyes with lash glue for glam sparkle.</li>
+      </ul>
+    </section>
+
+    <section class="bottom-highlight">
+      <img src="images/og_lip_smacker.webp" alt="Y2K Compact">
+      <div class="highlight-text">
+        <h3>Y2K Beauty Memory</h3>
+        <p>Remember digging through your caboodle for that strawberry Lip Smacker? Or stealing your sister’s glitter mascara? This era was peak ✨extra✨ — and we loved every second.</p>
+
+      </div>
+    </section>
+    
   <footer>
-    <p>Footer or ending section text</p>
+    <p>Made with 💖 & glitter. Your 2000s beauty blast!</p>
   </footer>
 
   <script>

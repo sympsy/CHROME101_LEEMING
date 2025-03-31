@@ -1,0 +1,308 @@
+/* ==================== GLOBAL STYLES ==================== */
+body {
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+  padding: 0;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-color: #fffafc;
+  color: #444;
+}
+
+/* ==================== HERO IMAGE ==================== */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+/* ==================== CARDS SECTION (Makeup Items) ==================== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #d63384;
+}
+
+/* ==================== ICONS SECTION (Celebrity Gallery) ==================== */
+.icons {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ==================== DETAILS SECTION (Dot List + Paragraph) ==================== */
+.details {
+  background: #fff0f8;
+  border: 2px dashed #ffb3d1;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.details ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+}
+
+.details img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ==================== TIPS & TRICKS SECTION ==================== */
+.tips-tricks h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2rem;
+  color: #cc00cc;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.tips-tricks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-tricks li {
+  background: #fff;
+  border-left: 6px solid #ff69b4;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  font-size: 1rem;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fce4ec;
+  font-family: 'Indie Flower', cursive;
+  font-size: 16px;
+  color: #880e4f;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .details ul {
+    padding-left: 0;
+  }
+
+  .details img {
+    margin: 0 auto;
+  }
+}
+
+/* ==================== CAROUSEL STYLES ==================== */
+.carousel-wrap {
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.carousel-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Permanent Marker', cursive;
+  color: #d63384;
+}
+
+.carousel-wrap .carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 20px 0;
+}
+
+.carousel-wrap .carousel-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollCarousel 20s linear infinite;
+}
+
+.carousel-wrap .carousel-item {
+  width: 200px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.carousel-wrap .carousel-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.carousel-wrap .carousel-item:hover::before {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-wrap .carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  z-index: 2;
+  opacity: 0;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-wrap .carousel-item:hover .carousel-text {
+  opacity: 1;
+}
+
+.carousel-wrap .carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollCarousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.bottom-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 800px;
+  margin: 40px auto;
+  border: 2px dashed #ffc0e0;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.bottom-highlight img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.highlight-text {
+  max-width: 500px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.highlight-text h3 {
+  font-size: 1.4rem;
+  color: #cc00cc;
+  margin-bottom: 10px;
+}
+
+.highlight-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .bottom-highlight {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-text {
+    max-width: 100%;
+  }
+}
