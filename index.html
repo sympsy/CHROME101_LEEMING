@@ -9,51 +9,110 @@
 </head>
 
 <body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <div class="navbar">
+  
+  
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+  
+  
+      <div class="nav-links-container">
+        <ul class="nav-links left-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Beauty</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+        <ul class="nav-links right-links">
+          <li><a href="#">Trends</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Credits</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Beauty</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Trends</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Credits</a></li>
+      </ul>
+    </div>
+  
+  
+  <div class="menu">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Beauty</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Trends</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Credits</a></li>
+      </ul>
+  </div>
     <div class="scrapbook-text-container">
         <h1 class="scrapbook-text">chrome101</h1>
     </div>
-    <div class="home-scrapbook" id="scrap-layer-1">
-        <div>
-            <img height="350px" src="./assets/images/scraps/FramePhotosScrap_Will.png">
-        </div>
-        <div>
-            <img height="400px" src="./assets/images/scraps/FramePhotosScrap_Lady.png">
-        </div>
-        <div>
-            <img height="350px" src="./assets/images/scraps/FramePhotosScrap_Cat.png">
-        </div>
-        <div>
-            <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Figure.png">
-        </div>
-        <div>
-            <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Watch.png">
-        </div>
-        <div>
-            <img height="450px" src="./assets/images/scraps/FramePhotosScrap_Ludacris.png">
-        </div>
+    <div class="scrapbooks">
+        <div class="home-scrapbook" id="scrap-layer-1">
+            <div>
+                <img height="350px" src="./assets/images/scraps/FramePhotosScrap_Will.png">
+            </div>
+            <div>
+                <img height="400px" src="./assets/images/scraps/FramePhotosScrap_Lady.png">
+            </div>
+            <div>
+                <img height="350px" src="./assets/images/scraps/FramePhotosScrap_Cat.png">
+            </div>
+            <div>
+                <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Figure.png">
+            </div>
+            <div>
+                <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Watch.png">
+            </div>
+            <div>
+                <img height="450px" src="./assets/images/scraps/FramePhotosScrap_Ludacris.png">
+            </div>
 
-    </div>
-    <div class="home-scrapbook" id="scrap-layer-2">
-        <div>
-            <img height="350px" src="./assets/images/scraps/FramePhotosScrap_SilverSurfer.png">
         </div>
-        <div>
-            <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Flowers.png">
-        </div>
-        <div>
-            <img height="350px" src="./assets/images/scraps/FramePhotosScrap_Hand.png">
-        </div>
-        <div>
-            <img height="150px" src="./assets/images/scraps/FramePhotosScrap_Grafitti.png">
-        </div>
-        <div>
-            <img height="400px" src="./assets/images/scraps/FramePhotosScrap_Angel.png">
-        </div>
-        <div>
-            <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Eye.png">
+        <div class="home-scrapbook" id="scrap-layer-2">
+            <div>
+                <img height="350px" src="./assets/images/scraps/FramePhotosScrap_SilverSurfer.png">
+            </div>
+            <div>
+                <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Flowers.png">
+            </div>
+            <div>
+                <img height="350px" src="./assets/images/scraps/FramePhotosScrap_Hand.png">
+            </div>
+            <div>
+              <img height="400px" src="./assets/images/scraps/FramePhotosScrap_Angel_Pink.png">
+          </div>
+            <div>
+                <img height="400px" src="./assets/images/scraps/FramePhotosScrap_Angel.png">
+            </div>
+            <div>
+                <img height="300px" src="./assets/images/scraps/FramePhotosScrap_Eye.png">
+            </div>
         </div>
     </div>
     <script src="scrapbook-font.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          const navbar = document.querySelector(".navbar");
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+      });
+      </script>
 </body>
 
 </html>

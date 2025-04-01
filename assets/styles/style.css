@@ -82,9 +82,14 @@ body {
 
 /*   */
 
+.scrapbooks {
+    margin-top: 20px;
+}
+
 #scrap-layer-1 {
-    position: absolute;
-    top: 5%;
+  pointer-events: none;  
+  position: absolute;
+    top: 2%;
     left: 22%;
 }
 
@@ -93,12 +98,12 @@ body {
 }
 
 .scrapbook-text-container {
+    pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     z-index: 10000;
-    margin-top: 9px;
     width: 100%;
     height: 100%;
 }
@@ -106,4 +111,288 @@ body {
 .scrapbook-text {
     color: white;
     display: inline-block;
+}
+
+/*  */
+
+.navbar {
+    display: none;
+    padding: 20px 20px 5px 20px; 
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Share Tech Mono', monospace;
+    z-index: 1000;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-links-container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+  }
+  
+
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  
+  .left-links {
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+  
+  .right-links {
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+    .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.3s ease, padding 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar ul li a:hover::after {
+    width: 100%;
+  }
+  
+
+  .right-links li:last-child a {
+    padding-right: 40px;
+  }
+  
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar.scrolled .logo a {
+    color: black;
+  }
+  
+
+  .hamburger {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar.scrolled .hamburger {
+    color: black;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-toggle:checked + .hamburger div {
+    background-color: black;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  }
+  
+  .menu-toggle:checked + .hamburger div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle:checked + .hamburger div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle:checked + .hamburger div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.73);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateX(-100%); 
+    transition: transform 0.5s ease-in-out;
+    z-index: 100;
+    padding-left: 20px;
+    padding-top: 80px;
+  }
+  
+
+  .menu-toggle:checked ~ .menu {
+    transform: translateX(0); 
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    font-family: 'Share Tech Mono';
+  }
+  
+  .menu ul li {
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .menu ul li:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+  @media screen and (max-width: 1024px) {
+    .logo {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .navbar ul li a {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .hamburger {
+      font-size: 28px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .left-links, .right-links {
+      justify-content: center;
+      flex-grow: unset;
+    }
+  
+    .menu ul li a {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .navbar {
+      padding: 20px 15px 5px 15px; 
+      height: 40px;
+    }
+  
+    .logo {
+      font-size: 16px;
+    }
+  
+    .navbar ul li a {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  
+    .hamburger {
+      font-size: 26px;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  
+    .menu-toggle:checked ~ .menu ul {
+      display: flex; 
+      flex-direction: column;
+      gap: 20px; 
+      align-items: center; 
+    }
+  
+    .navbar.scrolled .logo a {
+      color: black;
+    }
+  
 }
