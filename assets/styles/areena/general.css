@@ -300,3 +300,23 @@ p, .title-description, .article-meta, .product-text, .italic-text {
     }
   
 }
+
+.footer {
+  background-color: #f0f0f0;  
+  padding: 40px 0 20px 0;     
+  text-align: center;        
+  font-size: 14px;           
+}
+
+.footer .footer-content p {
+  margin: 5px 0;          
+}
+
+.footer .footer-content a {
+  color: #333;           
+  text-decoration: none;     }
+
+.footer .footer-content a:hover {
+  text-decoration: underline; 
+}
+

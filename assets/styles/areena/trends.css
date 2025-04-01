@@ -14,7 +14,7 @@ html, body {
 }
 
 .product-title {
-  background-image: url(images/fish.jpg);
+  background-image: url('./assets/areena/images/fish.jpg');
   padding: 40px 20px; 
   text-align: center; 
   border-radius: 8px; 
