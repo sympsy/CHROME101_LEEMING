@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    padding: 50px;
+    background: url('images/y2k cool cyber.jpg') no-repeat center center;
+    background-size: cover; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    z-index: 1; 
+}
+
+
+header {
+    background: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 2;
+    position: relative;
+}
+
+header h1, header p {
+    color: white; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.credits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; 
+    position: relative;
+}
+
+.credit {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 3;
+}
+
+.credit:hover {
+    transform: translateY(-5px);
+}
+
+.headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+h1, h3 {
+    color: #444;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 30px;
+    }
+    .credits {
+        grid-template-columns: 1fr;
+    }
+}

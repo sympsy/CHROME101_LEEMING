@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn3d.iconscout.com/3d/premium/thumb/abstract-hole-shape-3d-icon-download-in-png-blend-fbx-gltf-file-formats--shapes-y2k-pack-art-icons-9581710.png?f=webp"/>
+    <title>CHROME101 - Credits</title>
+    <link rel="stylesheet" href="./assets/styles/credits.css">
+    <link rel="stylesheet" href="./assets/styles/general.css" />
+</head>
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Chrome101</a>
+        </div>
+
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <div class="nav-links-container">
+            <ul class="nav-links left-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./jenn.html">Beauty</a></li>
+              <li><a href="./grace.html">Accessories</a></li>
+            </ul>
+            <ul class="nav-links right-links">
+              <li><a href="./trends.html">Trends</a></li>
+              <li><a href="./news.html">News</a></li>
+              <li><a href="./credits.html">Credits</a></li>
+            </ul>
+          </div>
+        </div>
+      
+      
+        <div class="menu">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./jenn.html">Beauty</a></li>
+            <li><a href="./grace.html">Accessories</a></li>
+            <li><a href="./trends.html">Trends</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./credits.html">Credits</a></li>
+          </ul>
+        </div>
+      
+      
+      <div class="menu">
+          <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="/jenn.html">Beauty</a></li>
+              <li><a href="./grace.html">Accessories</a></li>
+              <li><a href="./trends.html">Trends</a></li>
+              <li><a href="./news.html">News</a></li>
+              <li><a href="./credits.html">Credits</a></li>
+          </ul>
+      </div>
+
+    <div class="container">
+        <header>
+            <h1>Credits to our team! :)</h1>
+        </header>
+
+        <section class="credits">
+            <div class="credit">
+                <img src="./assets/images/areena/images/areena.jpeg" alt="Person 1" class="headshot">
+                <h3>Areena</h3>
+                <p class="bio">Passionate about creating seamless user experiences.</p>
+            </div>
+            <div class="credit">
+                <img src="./assets/images/areena/images/jaheim.jpg" alt="Person 2" class="headshot">
+                <h3>Jaheim</h3>
+                <p class="bio">Crafting beautiful UI/UX with a focus on usability and aesthetics.</p>
+            </div>
+            <div class="credit">
+                <img src="./assets/images/areena/images/grace.jpg" alt="Person 3" class="headshot">
+                <h3>Grace</h3>
+                <p class="bio">Bringing ideas to life through engaging text and multimedia.</p>
+            </div>
+            <div class="credit">
+                <img src="./assets/images/areena/images/jen.jpg" alt="Person 4" class="headshot">
+                <h3>Jen</h3>
+                <p class="bio">Ensuring smooth execution and successful completion of the project.</p>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                const navbar = document.querySelector(".navbar");
+                if (window.scrollY > 50) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>
