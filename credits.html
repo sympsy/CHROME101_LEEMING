@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
+    <link rel="stylesheet" href="credits.css">
+    <link rel="stylesheet" href="general.css" />
+</head>
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Chrome101</a>
+        </div>
+
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <div class="nav-links-container">
+            <ul class="nav-links left-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+            <ul class="nav-links right-links">
+                <li><a href="#">Trends</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Credits</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Trends</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Credits</a></li>
+        </ul>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Trends</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Credits</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Credits to our team! :)</h1>
+        </header>
+
+        <section class="credits">
+            <div class="credit">
+                <img src="images/areena.jpeg" alt="Person 1" class="headshot">
+                <h3>Areena</h3>
+                <p class="bio">Passionate about creating seamless user experiences.</p>
+            </div>
+            <div class="credit">
+                <img src="images/jaheim.jpg" alt="Person 2" class="headshot">
+                <h3>Jaheim</h3>
+                <p class="bio">Crafting beautiful UI/UX with a focus on usability and aesthetics.</p>
+            </div>
+            <div class="credit">
+                <img src="images/grace.jpg" alt="Person 3" class="headshot">
+                <h3>Grace</h3>
+                <p class="bio">Bringing ideas to life through engaging text and multimedia.</p>
+            </div>
+            <div class="credit">
+                <img src="images/jen.jpg" alt="Person 4" class="headshot">
+                <h3>Jen</h3>
+                <p class="bio">Ensuring smooth execution and successful completion of the project.</p>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                const navbar = document.querySelector(".navbar");
+                if (window.scrollY > 50) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>

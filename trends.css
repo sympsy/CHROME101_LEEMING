@@ -468,30 +468,6 @@ html, body {
 
 
 
-.hamburger {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-
-  .menu-toggle:checked ~ .menu ul {
-    display: flex; 
-    flex-direction: column;
-    gap: 20px; 
-    align-items: center; 
-  }
-
-  .navbar.scrolled .logo a {
-    color: black;
-  }
-
   .hero {
     height: 50vh;
   }
@@ -503,7 +479,7 @@ html, body {
   .hero-text p {
     font-size: 1rem;
   }
-}
+
 
 /* Footer Styles */
 .footer {
