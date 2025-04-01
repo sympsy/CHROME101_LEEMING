@@ -15,7 +15,7 @@ body {
     width: 85%;
     max-width: 1200px;
     padding: 50px;
-    background: url('images/y2k cool cyber.jpg') no-repeat center center;
+    background: url('../assets/images/y2k cool cyber.jpg') no-repeat center center;
     background-size: cover; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
