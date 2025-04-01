@@ -20,7 +20,7 @@ body {
     gap: 10px;
     /* Space between grid items */
     padding: 20px;
-    max-width: 85%;
+    max-width: 60%;
     /* Optional max width for the scrapbook */
     margin: 0 auto;
     transition: 0.5s;
